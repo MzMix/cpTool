@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREATIVE CONTEMPORARY CODE PRESENTATION TOOL</title>
+
+    <link rel="stylesheet" href="./index.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./prism.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>CREATIVE CONTEMPORARY CODE PRESENTATION TOOL</h1>
+    </header>
+
+    <main>
+
+        <section id="container">
+            <pre class="line-numbers" id="codeHere">
+<code class="language-clike">#include &lt;iostream&gt;</code>
+<code class="language-clike">using namespace std;</code>
+<code class="language-clike"> </code>
+<code class="language-clike">int main(){</code>
+<code class="language-clike">   cout&lt;&lt;"Hello world!";</code>
+<code class="language-clike">   return 0;</code>
+<code class="language-clike">}</code>
+            </pre>
+            <div id="buttonRow">
+                <button id="lastLine">LAST LINE</button>
+                <label for="file-upload" id="custom-file-upload">Load File</label>
+                <input id="file-upload" type="file" onchange="previewFile()" />
+                <button id="nextLine" onclick="showNextLine()">NEXT LINE</button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Created with <svg class="redElement" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+            </svg> by Mikołaj Zuziak</p>
+    </footer>
+
+    <div class="content"></div>
+    <script src="./prism.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
