@@ -14,6 +14,7 @@ function previewFile() {
         codePreview.length = codePreview.lines.length - 1;
         codePreview.target = document.getElementById('codeHere'); //Wybranie pola z kodem
         codePreview.target.innerHTML = ""; //Czyszczenie pola z kodem
+        codePreview.linesShown = 0;
 
         showNextLine(); //Wyswietlenie pierwszej linijki
     }, false);
