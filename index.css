@@ -122,6 +122,12 @@ input[type="file"] {
     transition: 100ms ease-in-out;
 }
 
+#buttonRow buttonm,
+#custom-file-upload {
+    -webkit-user-select: none;
+    user-select: none;
+}
+
 #lastLine {
     background: #FF8086;
 }
@@ -150,9 +156,9 @@ input[type="file"] {
     }
 }
 
-pre[class*="language-"],
+/* pre[class*="language-"],
 code[class*="language-"] {
     white-space: normal;
     overflow: auto;
-    word-break: break-word;
-}
+    word-break: break-word !important;
+} */

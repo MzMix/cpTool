@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CREATIVE CONTEMPORARY CODE PRESENTATION TOOL</title>
+    <title>CODE PRESENTATION TOOL</title>
 
     <link rel="stylesheet" href="./index.css" />
 
@@ -19,10 +19,10 @@
 
 </head>
 
-<body>
+<body id="langSpec">
 
     <header>
-        <h1>CREATIVE CONTEMPORARY CODE PRESENTATION TOOL</h1>
+        <h1>CODE PRESENTATION TOOL</h1>
     </header>
 
     <main>
@@ -38,7 +38,7 @@
 <code class="language-clike">}</code>
             </pre>
             <div id="buttonRow">
-                <button id="lastLine">LAST LINE</button>
+                <button id="lastLine" onclick="showLastLine()">PREVIOUS LINE</button>
                 <label for="file-upload" id="custom-file-upload">Load File</label>
                 <input id="file-upload" type="file" onchange="previewFile()" />
                 <button id="nextLine" onclick="showNextLine()">NEXT LINE</button>
@@ -58,6 +58,14 @@
 
     <div class="content"></div>
     <script src="./prism.js"></script>
+
+    <script type="text/javascript">
+        Prism.plugins.NormalizeWhitespace.setDefaults({
+            'break-lines': 80,
+
+        });
+    </script>
+
     <script src="./index.js"></script>
 </body>
 

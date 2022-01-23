@@ -28,20 +28,28 @@ function showNextLine() {
     if (codePreview.linesShown < codePreview.length) {
 
         let code = document.createElement('CODE');
+        code.id = `line${codePreview.linesShown}`;
+        code.classList.add('language-py');
         if (codePreview.lines[codePreview.linesShown] == "") {
-            code.innerHTML = " ";
+            code.innerHTML = "\n";
         } else {
             code.innerHTML = codePreview.lines[codePreview.linesShown];
+            code.innerHTML += '\n';
         }
-        codePreview.target.append(`\n`, code);
+        codePreview.target.append(code);
 
         Prism.highlightAll();
         codePreview.linesShown++;
     }
 }
-// function showLastLine() {
-//     codePreview.linesShown--;
-//     codePreview.insert.innerHTML = codePreview.lines[codePreview.linesShown];
-//     codePreview.target.appendChild(codePreview.insert);
-//     Prism.highlightAll();
-// }
+
+function showLastLine() {
+    if (codePreview.linesShown > 0) {
+
+        let lastElement = document.getElementById(`line${codePreview.linesShown-1}`);
+        codePreview.target.removeChild(lastElement);
+
+        // Prism.highlightAll();
+        codePreview.linesShown--;
+    }
+}
